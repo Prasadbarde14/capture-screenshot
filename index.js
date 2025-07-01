@@ -68,8 +68,8 @@ async function updateContentUrlsFromScheduleObj(scheduleObj, apiResponse) {
   };
 }
 
-cron.schedule("*/1 * * * *", async () => {
-  // cron.schedule('0 */4 * * *', async () => {
+// cron.schedule("*/1 * * * *", async () => {
+  cron.schedule('0 */4 * * *', async () => {
   console.log(`Cron job triggered at: ${new Date().toLocaleString()}`);
 
   try {
@@ -138,6 +138,9 @@ console.log("Cron job service started.");
 
 
 
+app.get("/", (req, res) => {
+  res.send("📸 Screenshot service is up and running!");
+});
 
 
 
