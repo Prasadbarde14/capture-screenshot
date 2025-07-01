@@ -138,9 +138,7 @@ console.log("Cron job service started.");
 
 
 
-app.get("/", (req, res) => {
-  res.send("📸 Screenshot service is up and running!");
-});
+
 
 
 
@@ -306,3 +304,8 @@ app.post('/screenshot', async (req, res) => {
 
 const PORT = 3001;
 app.listen(PORT, () => console.log(`📸 Screenshot service running on port ${PORT}`));
+
+
+app.get("/", (req, res) => {
+  res.send("📸 Screenshot service is up and running!");
+});
